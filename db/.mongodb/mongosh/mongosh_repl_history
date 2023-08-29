@@ -1,0 +1,16 @@
+exit
+show dbs
+exit
+eit
+show dbs
+db.test.insert({"name": "Joi"})
+use bt-takehome
+help
+ls
+use bt
+show dbs
+exit
+show dbs
+use bt
+show dbs
+dbs
