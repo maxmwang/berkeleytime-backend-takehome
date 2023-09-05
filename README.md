@@ -16,23 +16,22 @@ If you are having any issues setting up the development environment or have any 
 
 ## Introduction
 
-In this project, the primary stack you will be working with is Javascript on Node and REST API with ExpressJS.
+In this project, the primary stack you will be working with is Typescript on Node and a REST API built with ExpressJS.
 Here are a list of useful resources you may need:
 
 
 - [Express](https://expressjs.com)
-- [MDN's Javascript Documentation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+- [Typescript](https://www.typescriptlang.org/docs)
 
 You may also use any other resources and tools you seem fit.
 
 ## Project Outline
 
-It is Pokémon day! Use the [PokeAPI](https://pokeapi.co) to build a backend that allows users to see a quick preview of a Pokémon, register themselves as a Player, add Pokémon to their Player's inventory, and view the quick previews for each Pokémon in their inventory. These requirements are detailed in the [Tasks](#tasks) section.
+It is Pokémon day! Use the [PokeAPI](https://pokeapi.co) to build a backend that allows users to see a quick preview of a Pokémon, register themselves as a Player and manage the Pokémon in their inventory, and search for other players who own a certain Pokémon. These requirements are detailed in the [Tasks](#tasks) section.
 
 ### Getting Started
 
 Please **DO NOT** fork the repository. We don't want anyone to be able to easily look up your solution! Instead, create your own private copy of the repository. I will explain how to send me your submission at the end. Use the following commands to get up and running:
-
 
 ```sh
 # /berkeleytime-takehome
@@ -68,4 +67,3 @@ Your code should reside in `src`. Do not add/modify files outside of `src`, howe
 Before you submit, ensure you have completed and tested all the required tasks above.
 
 To submit, invite me (maxmwang) to your private repository on GitHub with your committed solution and make sure to send me an email with a link to your repository.
-
