@@ -31,7 +31,8 @@ It is Pokémon day! Use the [PokeAPI](https://pokeapi.co) to build a backend tha
 
 ### Getting Started
 
-After cloning the repository, run:
+Please **DO NOT** fork the repository. We don't want anyone to be able to easily look up your solution! Instead, create your own private copy of the repository. I will explain how to send me your submission at the end. Use the following commands to get up and running:
+
 
 ```sh
 # /berkeleytime-takehome
@@ -45,26 +46,26 @@ To start the application, run:
 npm run dev
 ```
 
-In `src/db`, you will find a mock key-value store database that you will need to use. Use this to store any data necessary for the application.
+### Database
+
+In `src/db`, you will find an implementation of a simple key-value store database. Please use this for all data storage needs in this project. You do not need to understand how its implemented, just how to use its interface.
 
 ## Tasks
 
-1. Using the [PokeAPI](https://pokeapi.co), implement the first requirement. Given a request containing the name of a Pokémon, your application should respond with a quick preview. This quick preview should contain:
-    - id
-    - name
-    - types
-    - base stat
-    - weight
-    - height
-    - abilities
-2. A user should be able to register themselves as a Player in our application. Our application needs to store some necessary information about our user in their Player profile, including (all given by the user):
-    - username
-    - favorite color
-3. Players want to have their own Pokémon. Multiple players can own the same Pokémon. A user will request to own Pokémon by name.
-4. Players want to know what Pokémon they and their friends have. A player might ask your application for all the Pokémon, along with a quick preview of each (as defined in step 1), owned by some player given a username.
+While working on these tasks, keep in mind that we will be evaluating your implementation on code quality and organization, API design, and how edge/error cases are handled. There will be situations where you will need to determine the best approach and implementation details using your own discretion.
 
-Your code should reside in `src`. Do not add/modify files outside of `src`. Additionally, do not install/uninstall any other packages.
+Your code should reside in `src`. Do not add/modify files outside of `src`, however feel free to organize your code into files and directories inside `src` as you see fit. Additionally, do not install/uninstall any other packages.
 
-## Submission
+1. Using the [PokeAPI](https://pokeapi.co), implement the first requirement: given a request containing the name of a Pokémon, your application should respond with a quick preview. This quick preview should contain:
+    - name of the pokemon
+    - name of each ability the pokemon has
+    - value of each stat the pokemon has
+2. Users should be able to create players, as well as add, remove, and view Pokemon to each player's inventory. Implement endpoints that allow them to do these actions.
+3. Finally, users want to see which player(s) have a Pokemon. Implement an endpoint to get all the players with a certain Pokemon.
 
-Upon completion, push your code to a public repository and email the link to the same email you received this project from.
+## Submitting
+
+Before you submit, ensure you have completed and tested all the required tasks above.
+
+To submit, invite me (maxmwang) to your private repository on GitHub with your committed solution and make sure to send me an email with a link to your repository.
+
