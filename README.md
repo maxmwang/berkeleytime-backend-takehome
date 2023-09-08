@@ -47,7 +47,7 @@ npm run dev
 
 ### Database
 
-In `src/db`, you will find an implementation of a simple key-value store database. Please use this for all data storage needs in this project. You do not need to understand how its implemented, just how to use its interface.
+In `src/db`, you will find an implementation of a simple key-value store database. Please use this for all data storage needs in this project. You do not need to understand how its implemented, just how to use its interface. Also, please do not modify the `db` file. 
 
 ## Tasks
 
