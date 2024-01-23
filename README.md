@@ -1,4 +1,4 @@
-# Berkeleytime Fall 2023 Backend Take-Home Project
+# Berkeleytime Spring 2024 Backend Take-Home Project
 
 Role: Backend Developer
 
