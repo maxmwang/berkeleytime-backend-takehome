@@ -1,69 +1,98 @@
 # Berkeleytime Fall 2023 Backend Take-Home Project
 
-Primary Role: Backend
+Role: Backend Developer
 
 Estimated Time to Complete: 1-2 hours
 
 Welcome!
 This is the take-home project for the backend developer position at Berkeleytime.
-Thank you for your continued interest in volunterring with us!
+Thank you for your continued interest in volunteering with us!
 
 This README.md will be your guide as you work through this take-home project.
-Please do not be stressed—there is not one right answer to this project.
-Rather, I want you to be creative and innovative as you approach the problems and challenges that you will face.
+Remember, there is no one right answer—we want you to be creative and innovative as you approach these problems and challenges.
 
-If you are having any issues setting up the development environment or have any other questions/concerns, feel free to reply to the email you received this project from.
+If you are having any issues setting up the development environment or have any other questions/concerns, feel free to reply to the email you received this project invite from.
 
 ## Introduction
 
-In this project, the primary stack you will be working with is Typescript on Node and a REST API built with ExpressJS.
-Here are a list of useful resources you may need:
+It is Pokémon day! Use the [PokeAPI](https://pokeapi.co) to build a backend that allows users to see a quick preview of a Pokémon, register themselves as a Pokémon trainer, and manage the Pokémon in their inventory. These requirements are detailed in the [Tasks](#tasks) section.
 
+## Implementation
+
+You are given two implementation options:
+
+1. Use the given TypeScript template.
+2. Use your preferred template.
+
+### TypeScript Template
+
+The primary stack is Typescript on Node running an Express server.
+There is a key-value store implemented at `db/db.ts`.
+Here are a list of useful resources you may need:
 
 - [Express](https://expressjs.com)
 - [Typescript](https://www.typescriptlang.org/docs)
 
-You may also use any other resources and tools you seem fit.
-
-## Project Outline
-
-It is Pokémon day! Use the [PokeAPI](https://pokeapi.co) to build a backend that allows users to see a quick preview of a Pokémon, register themselves as a Player and manage the Pokémon in their inventory, and search for other players who own a certain Pokémon. These requirements are detailed in the [Tasks](#tasks) section.
-
-### Getting Started
-
-Please **DO NOT** fork the repository. We don't want anyone to be able to easily look up your solution! Instead, create your own private copy of the repository. I will explain how to send me your submission at the end. Use the following commands to get up and running:
+Please **DO NOT** fork the repository.
+We don't want anyone to be able to easily look up your solution!
+Instead, create your own private copy of the repository.
+Submission details are detailed in the [Submission and Scoring](#submission-and-scoring) section.
+Use the following commands to get up and running:
 
 ```sh
-# /berkeleytime-takehome
+# /berkeleytime-backend-takehome
 npm install
-```
-
-To start the application, run:
-
-```sh
-# /berkeleytime-takehome
 npm run dev
 ```
 
-### Database
+### Preferred Template
 
-In `src/db`, you will find an implementation of a simple key-value store database. Please use this for all data storage needs in this project. You do not need to understand how its implemented, just how to use its interface. Also, please do not modify the `db` file. 
+You are free to use any stack you would like.
+Please limit programming languages to common general purpose languages, such as Python, Java, etc.
+You must implement your own key-value store abstraction that matches the TypeScript template's implementation's functionality.
+
+### Datastore
+
+You are required to use/implement a key-value store abstraction.
+Please use this implementation for all data storage needs.
 
 ## Tasks
 
-While working on these tasks, keep in mind that we will be evaluating your implementation on code quality and organization, API design, and how edge/error cases are handled. There will be situations where you will need to determine the best approach and implementation details using your own discretion.
+All data can be found using the [PokeAPI](https://pokeapi.co).
 
-Your code should reside in `src`. Do not add/modify files outside of `src`, however feel free to organize your code into files and directories inside `src` as you see fit. Additionally, do not install/uninstall any other packages.
+1. Implement `GET /api/pokemon?name=X`, which respond with a quick preview containing the name of the pokemon, the name of each ability the pokemon has, and the name and base value of each stat the pokemon has. For example, given `name=ditto`, your server should respond:
+    ```json
+    {
+        "name": "ditto",
+        "abilities": [
+            "limber",
+            "imposter"
+        ],
+        "stats": {
+            "hp": 48,
+            "attack":48,
+            "defense": 48,
+            "special-attack": 48,
+            "special-defense": 48,
+            "speed": 48
+        }
+    }
+    ```
+2. Implement `POST /api/player`, which registers a player. An example request body is:
+    ```json
+    {
+        "username": "George"
+    }
+    ```
+3. Implement endpoints at `/api/player/pokemon?player=X`, which allow players to view, add, and remove Pokemon to a player's inventory. You must use a single endpoint route to implement all three features.
 
-1. Using the [PokeAPI](https://pokeapi.co), implement the first requirement: given a request containing the name of a Pokémon, your application should respond with a quick preview. This quick preview should contain:
-    - name of the pokemon
-    - name of each ability the pokemon has
-    - value of each stat the pokemon has
-2. Users should be able to create players, as well as add, remove, and view Pokemon to each player's inventory. Implement endpoints that allow them to do these actions.
-3. Finally, users want to see which player(s) have a Pokemon. Implement an endpoint to get all the players with a certain Pokemon.
-
-## Submitting
+## Submission and Scoring
 
 Before you submit, ensure you have completed and tested all the required tasks above.
 
 To submit, invite me (maxmwang) to your private repository on GitHub with your committed solution and make sure to send me an email with a link to your repository.
+
+Your final submission will be tested with an autograder for basic functionality, but the source code will also be analyzed.
+Will be evaluating your implementation on code quality and organization, API design, and how edge/error cases are handled.
+The autograded portion will be weighed less.
+If you use your own tech stack, your datastore implementation will also be analyzed.
