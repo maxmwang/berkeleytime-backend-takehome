@@ -84,7 +84,12 @@ All data can be found using the [PokeAPI](https://pokeapi.co).
         "username": "George"
     }
     ```
-3. Implement endpoints at `/api/player/pokemon?player=X`, which allow players to view, add, and remove Pokemon to a player's inventory. You must implement all features with the same route.
+3. Implement endpoints at `/api/player/pokemon?player=X`, which allow players to view, add, and remove Pokemon to a player's inventory. You must implement all features with the same route. For adding and removing, you may expect a request body of the form:
+    ```json
+    {
+        "pokemon": "ditto"
+    }
+    ```
 
 ## Submission and Scoring
 
